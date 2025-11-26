@@ -31,13 +31,15 @@ export const synthesizeAudio = async (text: string, voiceId: string) => {
     return response.data;
 };
 
-export const getUserSettings = async (clerkUserId: string) => {
-    const response = await api.get('/user/settings', { params: { clerk_user_id: clerkUserId } });
+export const getUserSettings = async (userId: string) => {
+    const response = await api.get('/user/settings', { params: { user_id: userId } });
     return response.data;
 };
 
-export const updateUserSettings = async (settings: any) => {
-    const response = await api.put('/user/settings', settings);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const updateUserSettings = async (userId: string, settings: any) => {
+    const payload = { ...settings, user_id: userId };
+    const response = await api.put('/user/settings', payload);
     return response.data;
 };
 

@@ -29,7 +29,7 @@ async def test_backend():
     print("\n📌 Next steps:")
     print("   1. Start frontend: cd frontend && npm run dev")
     print("   2. Open http://localhost:3000")
-    print("   3. Sign in with Clerk")
+    print("   3. Sign in")
     print("   4. Configure settings")
 
 if __name__ == "__main__":

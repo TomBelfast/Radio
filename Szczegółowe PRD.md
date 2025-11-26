@@ -69,25 +69,6 @@ user_id (FK)
 
 created_at (DateTime)
 
-type (Enum: "traffic", "weather", "manual")
-
-input_data (JSON) – Jakie miasto/tekst wpisano.
-
-generated_text (Text) – Co wygenerowało OpenAI.
-
-audio_url (String, nullable) – Link do pliku (jeśli przechowujemy).
-
-4. Architektura Funkcjonalna i API
-4.1. Endpointy Backend (FastAPI)
-Wszystkie endpointy (poza /health) wymagają nagłówka Authorization: Bearer <clerk_token>.
-
-GET /api/health – Status serwisu.
-
-POST /api/generate/traffic
-
-Input: { city: str, prompt_style: str (opcjonalny custom prompt) }
-
-Proces: Google Routes API -> OpenAI (Redakcja) -> Zwraca tekst (JSON).
 
 POST /api/generate/weather
 

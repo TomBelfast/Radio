@@ -47,7 +47,7 @@ Uzyskaj klucze API:
 - **ElevenLabs**: https://elevenlabs.io/app/settings/api-keys
 - **Google Maps**: https://console.cloud.google.com/apis/credentials
 - **OpenWeatherMap**: https://home.openweathermap.org/api_keys
-- **Clerk**: https://dashboard.clerk.com
+- **Stack Auth (Neon)**: https://neon.tech
 
 ### 4. Frontend Setup
 
@@ -62,7 +62,7 @@ copy env.example .env.local  # Windows
 # lub
 cp env.example .env.local    # Linux/Mac
 
-# Wklej klucze Clerk do .env.local
+# Wklej klucze Stack Auth do .env.local
 ```
 
 ### 5. Uruchomienie
@@ -85,7 +85,7 @@ Frontend: http://localhost:3000
 
 1. Otwórz http://localhost:3000
 2. Kliknij "Sign In"
-3. Zarejestruj się przez Clerk
+3. Zarejestruj się przez Stack Auth
 4. Przejdź do zakładki "Settings"
 5. Uzupełnij:
    - Default City (np. "Belfast")
@@ -110,8 +110,8 @@ Frontend: http://localhost:3000
 **Problem:** Frontend nie łączy się z backendem  
 **Rozwiązanie:** Sprawdź czy backend działa na porcie 8000 i czy CORS jest poprawnie skonfigurowany.
 
-**Problem:** Clerk nie działa  
-**Rozwiązanie:** Sprawdź czy klucze `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` i `CLERK_SECRET_KEY` są poprawne.
+**Problem:** Stack Auth nie działa  
+**Rozwiązanie:** Sprawdź czy klucze `NEXT_PUBLIC_STACK_PROJECT_ID` i `NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY` są poprawne.
 
 ## 📝 Testowanie
 

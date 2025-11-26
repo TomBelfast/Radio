@@ -28,11 +28,11 @@ class UserSettingsBase(BaseModel):
     default_language: str = "pl"
 
 class UserSettingsCreate(UserSettingsBase):
-    clerk_user_id: str
+    user_id: str
 
 class UserSettingsResponse(UserSettingsBase):
     id: int
-    clerk_user_id: str
+    user_id: str
 
     class Config:
         from_attributes = True

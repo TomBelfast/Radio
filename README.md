@@ -18,8 +18,7 @@ AI-powered traffic and weather report generator for radio stations.
 - TypeScript
 - Tailwind CSS
 - shadcn/ui
-- Clerk Auth
-- Zustand
+- Stack Auth (Neon)
 
 ## Setup Instructions
 
@@ -27,7 +26,8 @@ AI-powered traffic and weather report generator for radio stations.
 - Python 3.11+
 - Node.js 18+
 - PostgreSQL database (Neon recommended)
-- API keys for: OpenAI, ElevenLabs, Google Maps, OpenWeatherMap, Clerk
+- API keys for: OpenAI, ElevenLabs, Google Maps, OpenWeatherMap
+- Stack Auth (Neon) Project ID and Keys
 
 ### Backend Setup
 
@@ -82,8 +82,9 @@ npm install
 
 3. Create `.env.local` file (see `env.example`):
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_STACK_PROJECT_ID=...
+NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY=...
+STACK_SECRET_SERVER_KEY=...
 ```
 
 4. Start development server:
@@ -95,7 +96,7 @@ Frontend will run on `http://localhost:3000`
 
 ## Usage
 
-1. Sign in using Clerk authentication
+1. Sign in using Stack Auth authentication
 2. Go to Settings tab and configure:
    - Default city
    - ElevenLabs voice ID

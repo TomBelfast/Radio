@@ -4,11 +4,11 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { useSettingsStore } from '@/store/useSettingsStore';
-import { useUser } from '@clerk/nextjs';
+import { useUser } from '@stackframe/stack';
 import { Loader2 } from 'lucide-react';
 
 export const SettingsCard = () => {
-    const { user } = useUser();
+    const user = useUser();
     const { settings, fetchSettings, saveSettings, isLoading } = useSettingsStore();
     const [localSettings, setLocalSettings] = useState({
         default_city: '',
@@ -30,12 +30,13 @@ export const SettingsCard = () => {
                 default_language: settings.default_language || 'pl'
             });
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [settings]);
 
     const handleSave = async () => {
         if (!user) return;
-        await saveSettings({
-            clerk_user_id: user.id,
+        await saveSettings(user.id, {
+            user_id: user.id,
             ...localSettings
         });
     };

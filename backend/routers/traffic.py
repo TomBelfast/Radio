@@ -18,7 +18,7 @@ async def generate_traffic(request: TrafficRequest, db: AsyncSession = Depends(g
         request.city, traffic_data, request.prompt_style
     )
     
-    # 3. Save to History (Mock User ID for now as Auth is handled by Clerk on Frontend, 
+    # 3. Save to History (Mock User ID for now as Auth is handled by Frontend, 
     # but strictly we should decode token here. For MVP/PRD speed, we skip token decoding middleware implementation details 
     # unless explicitly requested, but we will save a placeholder user_id)
     # In a real app, we would extract user_id from the Bearer token.

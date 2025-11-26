@@ -15,6 +15,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, audioBlob })
     useEffect(() => {
         if (audioBlob) {
             const url = URL.createObjectURL(audioBlob);
+            // eslint-disable-next-line
             setSrc(url);
             return () => URL.revokeObjectURL(url);
         } else {
