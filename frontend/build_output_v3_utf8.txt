@@ -1,0 +1,39 @@
+﻿
+> frontend@0.1.0 build
+> next build
+
+   Ôľ▓ Next.js 15.5.6
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ Ôťô Compiled successfully in 9.6s
+   Linting and checking validity of types ...
+
+./components/SettingsCard.tsx
+33:9  Warning: Unused eslint-disable directive (no problems were reported from 'react-hooks/exhaustive-deps').
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/5) ...
+npm : Error occurred prerendering page "/". Read mo
+re: https://nextjs.org/docs/messages/prerender-erro
+r
+At line:1 char:1
++ npm run build > build_output_v3.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error 
+occu    rred ...prerender-error:String) [], RemoteE
+xception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+TypeError: Cannot read properties of undefined (rea
+ding 'toClientJson')
+    at A (C:\APP\Radio\frontend\.next\server\chunks
+\427.js:41:235314)
+    at stringify (<anonymous>) {
+  digest: '3808863665'
+}
+Export encountered an error on /page: /, exiting th
+e build.
+ ÔĘ» Next.js build worker exited with code: 1 and s
+ignal: null
